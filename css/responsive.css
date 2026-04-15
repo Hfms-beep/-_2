@@ -1,0 +1,145 @@
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    nav ul {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: var(--primary-color);
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 2rem;
+        transition: var(--transition);
+    }
+
+    nav ul.active {
+        left: 0;
+    }
+
+    nav ul li {
+        margin: 1rem 0;
+    }
+
+    .user-actions {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+    }
+
+    .product-modal-content {
+        flex-direction: column;
+    }
+
+    .modal-image-slider img {
+        height: 250px;
+    }
+
+    .account-tabs {
+        flex-direction: column;
+    }
+
+    .order-history {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .chat-window {
+        width: 280px;
+        height: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .products-filter {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filter-btn {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .product-actions {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .view-details, .add-to-cart {
+        width: 100%;
+    }
+
+    .account-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .cart-actions {
+        flex-direction: column;
+    }
+
+    .chat-window {
+        width: 250px;
+        right: -20px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        max-width: 900px;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    .about-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
