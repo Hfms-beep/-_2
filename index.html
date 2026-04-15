@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MABUTA - Военное оборудование</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
+    
+    
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <span>🛡️</span> MABUTA
+            </div>
+            <button class="mobile-menu-btn">☰</button>
+            <nav>
+                <ul>
+                    <li><a href="#" class="nav-link active" data-page="home">Главная</a></li>
+                    <li><a href="#" class="nav-link" data-page="catalog">Каталог</a></li>
+                    <li><a href="#" class="nav-link" data-page="about">О компании</a></li>
+                    <li><a href="#" class="nav-link" data-page="contacts">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="theme-toggle" id="themeToggle">🌙</button>
+                <div class="user-actions" id="userActions">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+                <div class="cart-icon" id="cartIcon">
+                    🛒
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Auth Modal -->
+    <div class="modal auth-modal" id="authModal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="auth-tabs">
+                <div class="auth-tab active" data-tab="login">Вход</div>
+                <div class="auth-tab" data-tab="register">Регистрация</div>
+            </div>
+            
+            <form class="auth-form active" id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Пароль</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <div class="form-options">
+                    <div class="remember-me">
+                        <input type="checkbox" id="rememberMe">
+                        <label for="rememberMe">Запомнить меня</label>
+                    </div>
+                    <a href="#" class="forgot-password">Забыли пароль?</a>
+                </div>
+                <button type="submit" class="auth-submit">Войти</button>
+            </form>
+            
+            <form class="auth-form" id="registerForm">
+                <div class="form-group">
+                    <label for="registerName">Имя</label>
+                    <input type="text" id="registerName" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerEmail">Email</label>
+                    <input type="email" id="registerEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerPhone">Телефон</label>
+                    <input type="tel" id="registerPhone" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerPassword">Пароль</label>
+                    <input type="password" id="registerPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerConfirmPassword">Подтверждение пароля</label>
+                    <input type="password" id="registerConfirmPassword" required>
+                </div>
+                <button type="submit" class="auth-submit">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        
+        <div class="hero-content">
+            <h1>MABUTA - Военное оборудование</h1>
+            <p>Профессиональное военное оборудование для оборонных и охранных операций</p>
+            <a href="#catalog" class="btn">Перейти в каталог</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">О компании MABUTA</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>MABUTA находится на профиле свое предводитель комментарии, расположенное в 1985 году. Осталось в 1986 году, как тест имеет наше репутацию на последнее годовое время, слегка зачастую и надсмотреть для оборонной оси по всему миру.</p>
+                    <p>Над «Балконой» экскуртирует восходные тактические современные, систематические, высокие оборудования и специализированные транспортные средства. Каждый продукт позволяет строгим качествам для соответствия высочайших внешних стандартов и картинфикациям.</p>
+                    <p>Мы понимаем, что в критических ситуациях наша оборудование может стать наиболее эффективным для MABUTA является внешностью нашей транспортной системы органов и специалистов безопасности безопасности ВСХ страны мира.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">30+</span>
+                        <span class="stat-label">Без связи</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Страна оборудования</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Лучший продукт</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">99.9%</span>
+                        <span class="stat-label">Рабочий производство</span>
+                    </div>
+                </div>
+                <!-- Карусель -->
+<div class="carousel-section">
+    <h3 class="section-title">Наша продукция</h3>
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="carousel-track" id="carouselTrack">
+                <div class="carousel-slide">
+                    <img src="images/slide1.jfif" alt="Тактическое снаряжение">
+                    <div class="slide-caption">Тактическое снаряжение</div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/slide 2.jfif" alt="Защитное оборудование">
+                    <div class="slide-caption">Защитное оборудование</div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/slide 3.jfif" alt="Системы связи">
+                    <div class="slide-caption">Системы связи</div>
+                </div>
+                
+            </div>
+        </div>
+        <button class="carousel-btn carousel-prev" id="carouselPrev">‹</button>
+        <button class="carousel-btn carousel-next" id="carouselNext">›</button>
+        <div class="carousel-dots" id="carouselDots"></div>
+    </div>
+</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="catalog">
+        <div class="container">
+            <h2 class="section-title">Каталог оборудования</h2>
+            <div class="products-filter">
+                <button class="filter-btn active" data-filter="all">Все категории</button>
+                <button class="filter-btn" data-filter="protective">Защитное снаряжение</button>
+                <button class="filter-btn" data-filter="vehicles">Транспортные средства</button>
+                <button class="filter-btn" data-filter="electronics">Электроника</button>
+                <button class="filter-btn" data-filter="aviation">Авиация</button>
+            </div>
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded here by JavaScript -->
+            </div>
+            <div class="pagination" id="pagination">
+                <!-- Pagination will be generated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Personal Account Section -->
+    <section class="account-section" id="account" style="display: none;">
+        <div class="container">
+            <div class="account-header">
+                <h2 class="section-title">Личный кабинет</h2>
+                <div class="account-welcome" id="accountWelcome">Добро пожаловать, </div>
+            </div>
+            
+            <div class="account-stats">
+                <div class="stat-card">
+                    <span class="stat-number" id="totalOrders">0</span>
+                    <span>Всего заказов</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" id="pendingOrders">0</span>
+                    <span>Ожидают доставки</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" id="totalSpent">0 ₽</span>
+                    <span>Всего потрачено</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" id="userSince">2024</span>
+                    <span>Пользователь с</span>
+                </div>
+            </div>
+            
+            <div class="account-tabs">
+                <div class="account-tab active" data-tab="orders">История заказов</div>
+                <div class="account-tab" data-tab="profile">Профиль</div>
+                <div class="account-tab" data-tab="addresses">Адреса доставки</div>
+                <div class="account-tab" data-tab="security">Безопасность</div>
+            </div>
+            
+            <div class="account-content active" id="ordersContent">
+                <h3>История заказов</h3>
+                <table class="order-history">
+                    <thead>
+                        <tr>
+                            <th>№ Заказа</th>
+                            <th>Дата</th>
+                            <th>Сумма</th>
+                            <th>Статус</th>
+                            <th>Действия</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ordersTable">
+                        <!-- Orders will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="account-content" id="profileContent">
+                <h3>Профиль пользователя</h3>
+                <form class="profile-form" id="profileForm">
+                    <div class="form-group">
+                        <label for="profileName">Имя</label>
+                        <input type="text" id="profileName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="profileEmail">Email</label>
+                        <input type="email" id="profileEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="profilePhone">Телефон</label>
+                        <input type="tel" id="profilePhone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="profileBirthdate">Дата рождения</label>
+                        <input type="date" id="profileBirthdate">
+                    </div>
+                    <button type="submit" class="btn">Сохранить изменения</button>
+                </form>
+            </div>
+            
+            <div class="account-content" id="addressesContent">
+                <h3>Адреса доставки</h3>
+                <div class="address-list" id="addressList">
+                    <!-- Addresses will be populated by JavaScript -->
+                </div>
+                <button class="btn" id="addAddressBtn">Добавить новый адрес</button>
+            </div>
+            
+            <div class="account-content" id="securityContent">
+                <h3>Безопасность</h3>
+                <form class="profile-form" id="securityForm">
+                    <div class="form-group">
+                        <label for="currentPassword">Текущий пароль</label>
+                        <input type="password" id="currentPassword" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="newPassword">Новый пароль</label>
+                        <input type="password" id="newPassword" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmNewPassword">Подтверждение нового пароля</label>
+                        <input type="password" id="confirmNewPassword" required>
+                    </div>
+                    <button type="submit" class="btn">Изменить пароль</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>О компании</h3>
+                    <p>MABUTA - ведущий поставщик военного оборудования с 1985 года. Мы обеспечиваем высочайшее качество продукции для оборонных нужд по всему миру.</p>
+                    <div class="social-links">
+                        <a href="#" title="Facebook">f</a>
+                        <a href="#" title="Twitter">t</a>
+                        <a href="#" title="Instagram">i</a>
+                        <a href="#" title="YouTube">y</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Категории</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Защитное снаряжение</a></li>
+                        <li><a href="#">Транспортные средства</a></li>
+                        <li><a href="#">Электроника</a></li>
+                        <li><a href="#">Авиация</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <ul class="footer-links">
+                        <li>ул. Оборотная Первомаячников, 1027</li>
+                        <li>Москва, 0062 00000</li>
+                        <li>Российская Федерация</li>
+                        <li>Тел: +7 (XXX) XXX-XX-XX</li>
+                        <li>Email: info@mabuta.ru</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 MABUTA. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Modal -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="product-modal-content">
+                <div class="modal-image-slider">
+                    <img src="" alt="" id="modalProductImage">
+                </div>
+                <div class="modal-product-info">
+                    <h2 class="modal-product-title" id="modalProductTitle"></h2>
+                    <p class="modal-product-description" id="modalProductDescription"></p>
+                    <div class="modal-product-features">
+                        <h3>Характеристики:</h3>
+                        <ul id="modalProductFeatures"></ul>
+                    </div>
+                    <div class="modal-product-price" id="modalProductPrice"></div>
+                    <div class="quantity-selector">
+                        <button class="quantity-btn minus">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1">
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                    <button class="btn add-to-cart-modal">Добавить в корзину</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div class="modal cart-modal" id="cartModal">
+        <div class="modal-content cart-content">
+            <button class="close-modal">&times;</button>
+            <h2>Корзина покупок</h2>
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be loaded here -->
+            </div>
+            <div class="cart-total">
+                <span>Итого:</span>
+                <span id="cartTotal">0 ₽</span>
+            </div>
+            <div class="cart-actions">
+                <button class="btn" id="continueShopping">Продолжить покупки</button>
+                <button class="btn" id="checkout">Оформить заказ</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chat Bot -->
+    <div class="chat-bot">
+        <div class="chat-toggle" id="chatToggle">💬</div>
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <h3>Помощник MABUTA</h3>
+                <button class="close-chat">&times;</button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot-message">
+                    Здравствуйте! Чем могу помочь?
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="chatInput" placeholder="Введите сообщение...">
+                <button id="sendMessage">Отправить</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
